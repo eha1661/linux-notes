@@ -200,7 +200,7 @@ In addition, many programs take input from a facility called __standard input__ 
 
 I/O redirection allows us to change where output goes and where input comes from.
 
-__Redirecting Standard Output__
+__Redirecting Standard Output__ \
 We use the __>__ redirection operator followed by the name of the file. We append redirected output to a file instead of overwriting the file from the beginning, using the __>>__ redirection operator
 
 Example
@@ -257,7 +257,7 @@ commands:
     cat < myfile.txt
     ``` 
 
-__Pipelines__
+__Pipelines__ \
 Using the pipeoperator __|__, the standard output of one command can be piped into the standard input of another.
 ```shell
 command1 | command2
