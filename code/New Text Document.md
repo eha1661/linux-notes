@@ -4,6 +4,7 @@
     2. __[Navigation](#navigation)__
     3. __[Exploring The System](#exploringsystem)__
     4. __[Manipulating Files and Directories](#manipulatingfilesdirectories)__
+    5. __[Working With Commands](#workingwithcommands)__
 2. __[Common Tasks and Essential Tools]__
 3. __[Writting Shell Scripts]__
 
@@ -104,14 +105,14 @@ Hard links also allow files to have multiple names, but they do it in a differen
 
 ## Manipulating Files and Directories <a name="manipulatingfilesdirectories"></a>
 
-### 1. Wildcards
+__Wildcards__ 
 <img src="/code/images/wildcards-1.PNG" alt="ls" style="width:500px;"/>
 
 <img src="/code/images/wildcards-2.PNG" alt="ls" style="width:350px;"/>
 
 <img src="/code/images/wildcards-3.PNG" alt="ls" style="width:500px;"/>
 
-### 2. commands 
+__commands__ 
 - To create directories ```mkdir directory...```
 - ```cp``` command
     - copies the single file or directory item1 to the file or directory item2 
@@ -153,17 +154,16 @@ entry for a file
         - They work by creating a special type of file that contains a text pointer to the referenced file or directory (like Windows shortcut)
 
 -----------------------------------
+## Working With Commands <a name="workingwithcommands"></a>
 
-## Working With Commands
-
-### 1. What is a command?
+__What is a command?__
 a command can be:
 - An executable program : it can be compiled binaries or a program written in a scripting language 
 - A command built into the shell itself (shell builtins). For example  ```type```
 - A shell function : miniature shell scripts incorporated into the environment
 - An alias
 
-### 2. commands 
+__commands__ 
 - ```type``` command
     - it is a shell builtin that displays the kind of command the shell will execute
 - ```which``` command
@@ -186,7 +186,7 @@ a command can be:
     - to see all the aliases defined in the environment ```alias```
     - aliases vanish when your shell session ends
 
-### 3. tricks
+__tricks__
 - It’s possible to put more than one command on a line ```command1; command2; command3...```
 
 -----------------------------------
