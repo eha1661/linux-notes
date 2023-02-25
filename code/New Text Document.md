@@ -5,6 +5,7 @@
     3. __[Exploring The System](#exploringsystem)__
     4. __[Manipulating Files and Directories](#manipulatingfilesdirectories)__
     5. __[Working With Commands](#workingwithcommands)__
+    6. __[Redirection](#redirection)__
 2. __[Common Tasks and Essential Tools]__
 3. __[Writting Shell Scripts]__
 
@@ -191,18 +192,16 @@ __tricks__
 
 -----------------------------------
 
-## RediRection (I/O Redirection)
+## Redirection (I/O Redirection) <a name="redirection"></a>
 
-Programs such as ls actually send their results to a special file called __standard output__ (often expressed as __stdout__) and their status messages to another file called __standard error__ (__stderr__). By default, both standard output and standard error are linked to the screen and not saved into a disk file.
+Programs such as ```ls``` actually send their results to a special file called __standard output__ (often expressed as __stdout__) and their status messages to another file called __standard error__ (__stderr__). By default, both standard output and standard error are linked to the screen and not saved into a disk file.
 
 In addition, many programs take input from a facility called __standard input__ (__stdin__),  which is, by default, attached to the keyboard.
 
 I/O redirection allows us to change where output goes and where input comes from.
 
-### 1. Redirecting Standard Output
-
-We use the __>__ redirection operator followed by the name of the file. Why w
- We append redirected output to a file instead of overwriting the file from the beginning, using the __>>__ redirection operator
+__Redirecting Standard Output__
+We use the __>__ redirection operator followed by the name of the file. We append redirected output to a file instead of overwriting the file from the beginning, using the __>>__ redirection operator
 
 Example
 - saving ls output to a file
@@ -216,7 +215,7 @@ Example
     ```shell
     > ls-empty.txt
     ```
-### 2. Redirecting Standard Error
+__Redirecting Standard Error__
 
 Redirecting standard error lacks the ease of a dedicated redirection operator.
 
@@ -244,7 +243,7 @@ examples:
     ls -l /bin/usr 2> /dev/null
     ``` 
 
-### 3. Redirecting Standard Input
+__Redirecting Standard Input__
 
 commands:
 - ```cat```
@@ -258,7 +257,7 @@ commands:
     cat < myfile.txt
     ``` 
 
-### 4. Pipelines <a name="pipelines"></a>
+__Pipelines__
 Using the pipeoperator __|__, the standard output of one command can be piped into the standard input of another.
 ```shell
 command1 | command2
@@ -286,16 +285,10 @@ The pipelines can be used as follows:
 - Read from Stdin and Output to Stdout and Files (tee)
     - The tee program reads standard input and copies it to both standard output (allowing the data to continue down the pipeline) and to one or more files
     - exampe : ```ls /usr/bin | tee ls.txt | grep zip```
+
 ----------------------------------------------------------------------
-
-
-
-### markdwon resources 
-- [shd101](https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics)
-- [Mastering Markdown](https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics)
-
-
-
-### Resources 
+# Resources 
 1. The Linux Command Line A Complete Introduction by William E. Shotts 
 <a name="ref1"></a>
+2. [markdown shd101](https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics)
+3. [Mastering Markdown](https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics)
