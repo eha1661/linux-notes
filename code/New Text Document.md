@@ -305,7 +305,7 @@ username@machinename:~$ echo $((2 + 2))
 4
 ``` 
 * brace expansion 
-> ``` shell
+``` shell
 username@machinename:~$ echo Front-{A,B,C}-Back
 ``` 
 ``` shell
