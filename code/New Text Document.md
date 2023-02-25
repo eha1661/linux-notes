@@ -67,6 +67,7 @@ shortcut | result|
 ----------------------------------------------------------------------------
 ## Exploring The System <a name="exploringsystem"></a>
 __Listing files and subdirectories__
+
 To list of files and subdirectories contained in the current working directory ```ls``` 
 <img src="/code/images/ls-options.PNG" alt="ls" style="width:500px;"/>
 
