@@ -1,18 +1,18 @@
 # Summary 
-1. __[Shell](#pookie)__
-    1. __[Intro Shell](#introshell)__
-    2. __[Navigation](#navigation)__
-    3. __[Exploring The System](#exploringsystem)__
-    4. __[Manipulating Files and Directories](#manipulatingfilesdirectories)__
-    5. __[Working With Commands](#workingwithcommands)__
-    6. __[Redirection](#redirection)__
-2. __[Common Tasks and Essential Tools]__
-3. __[Writting Shell Scripts]__
+1. __[Intro Shell](#introshell)__
+2. __[Navigation](#navigation)__
+3. __[Exploring The System](#exploringsystem)__
+4. __[Manipulating Files and Directories](#manipulatingfilesdirectories)__
+5. __[Working With Commands](#workingwithcommands)__
+6. __[Redirection](#redirection)__
+7. __[Expansion and Quoting](#expansionquoting)__
+8. __[Keyboard Tricks](#keyboardTricks)__  (TODAY)
+9. __[Permissions](#permissions)__ (TODAY)
+10. __[Processes](#processes)__ (TOMORROW)
+11. __[ProcessEnvironmentes](#environment)__ (TOMORROW)
+12. __[VI and VIM ](#vim)__
+13. __[Customizing the Prompt](#customizingprompt)__
 
-
-
-
-# 1. Shell <a name="pookie"></a>
 ## Intro Shell <a name="introshell"></a>
 __What is a Shell__
 The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell) [[1]](#ref1)
@@ -285,6 +285,70 @@ The pipelines can be used as follows:
 - Read from Stdin and Output to Stdout and Files (tee)
     - The tee program reads standard input and copies it to both standard output (allowing the data to continue down the pipeline) and to one or more files
     - exampe : ```ls /usr/bin | tee ls.txt | grep zip```
+
+## Expansion and Quoting <a name="expansionquoting"></a>
+__Expansion__
+Bash performs several substitutions upon the text before it carries out command.\
+For example, ```echo *```; the bash command expands ```*```into the files at the current directory.\
+There are different expansions available:
+* Pathname expansion
+``` shell
+username@machinename:~$ echo /user/*/share
+```
+* Tilde expansion: it expands into the name of the home directory of the named user
+it
+* arithmetic expansion: it follows this form ```$((expression))```
+``` shell
+username@machinename:~$ echo $((2 + 2))
+```
+``` shell
+4
+``` 
+* brace expansion 
+``` shell
+username@machinename:~$ echo Front-{A,B,C}-Back
+``` 
+``` shell
+Front-A-Back Front-B-Back Front-C-Back
+```
+``` shell
+username@machinename:~$ echo {01..15}
+``` 
+``` shell
+01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+```
+
+* parameter expansion
+``` shell
+username@machinename:~$ echo $USER
+``` 
+Note: if you misspell the name of a variable, the expansion will still take place but will result in an empty string.
+
+* command substitution
+``` shell
+username@machinename:~$ ls -l $(which cp)
+``` 
+
+__Quoting__
+* double quotes 
+``` shell
+username@machinename:~$ ls -l "two words.txt"
+``` 
+``` shell
+username@machinename:~$ echo $(cal)
+``` 
+``` shell
+username@machinename:~$ echo "$(cal)"
+``` 
+
+* single quotes : if we need to suppress all expansions, we use single quotes 
+
+* escaping characters : use ```\``` to eliminate the special meaning of these special charcters ```$, !, &, spaces, \ and others```
+``` shell
+username@machinename:~$ echo "$USER won \$200.00"
+``` 
+
+
 
 ----------------------------------------------------------------------
 # Resources 
