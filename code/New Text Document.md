@@ -1,15 +1,16 @@
 
 
 
-## Summary 
+# Summary 
 
-1. [Shell](#pookie)
-4. [pipelines](#pipelines)
+1. __[Shell](#pookie)__
 
 
-### Shell <a name="pookie"></a>
+
+# 1. Shell <a name="pookie"></a>
+## Intro Shell
 __What is a Shell__
-The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell)
+The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell) [[1]](#ref1)
 
 __shell prompt__
 ``` shell
@@ -66,12 +67,12 @@ shortcut | result|
 ### 1. listing files and subdirectories
 To list of files and subdirectories contained in the current working directory ```ls``` 
 
-<img src="/images/ls-options.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/ls-options.png" alt="ls" style="width:500px;"/>
 
 The long format listing returns many info. for example 
 ```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ```
 
-<img src="/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
+<img src="code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
 
 
 To show a brief description of a file ```file filename```
@@ -293,3 +294,6 @@ The pipelines can be used as follows:
 
 
 
+### Resources 
+1. The Linux Command Line A Complete Introduction by William E. Shotts 
+<a name="ref1"></a>
