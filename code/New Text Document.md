@@ -1,7 +1,7 @@
 # Summary 
 1. __[Shell](#pookie)__
-    1. __[Intro Shell](#IntroShell)__
-    2. __[Navigation](#Navigation)__
+    1. __[Intro Shell](#introshell)__
+    2. __[Navigation](#navigation)__
     3. __[Exploring The System](#ExploringTheSystem)__
     4. __[Manipulating Files and Directories](#ManipulatingFilesDirectories)__
 2. __[Common Tasks and Essential Tools]__
@@ -11,7 +11,7 @@
 
 
 # 1. Shell <a name="pookie"></a>
-## Intro Shell <a name="IntroShell"></a>
+## Intro Shell <a name="introshell"></a>
 __What is a Shell__
 The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell) [[1]](#ref1)
 
@@ -40,7 +40,7 @@ __composition of a command line__
 
 ----------------------------------------------------------------------------
 
-## Navigation <a name="Navigation"></a>
+## Navigation <a name="navigation"></a>
 Unix-like systems such as Linux always have a single file system tree, regardless of how many drives or storage devices are attached to the computer. 
 
 The directory we are standing in is called the __current working directory__.
