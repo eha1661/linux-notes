@@ -1,11 +1,17 @@
 # Summary 
-
 1. __[Shell](#pookie)__
+    1. __[Intro Shell](#IntroShell)__
+    2. __[Navigation](#Navigation)__
+    3. __[Exploring The System](#ExploringTheSystem)__
+    4. __[Manipulating Files and Directories](#ManipulatingFilesDirectories)__
+2. __[Common Tasks and Essential Tools]__
+3. __[Writting Shell Scripts]__
+
 
 
 
 # 1. Shell <a name="pookie"></a>
-## Intro Shell
+## Intro Shell <a name="IntroShell"></a>
 __What is a Shell__
 The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell) [[1]](#ref1)
 
@@ -32,9 +38,9 @@ __composition of a command line__
 * short option consists of one letter for example : -l 
 * long options consist of a word preceded by two dashes : --help
 
+----------------------------------------------------------------------------
 
-
-## Navigation
+## Navigation <a name="Navigation"></a>
 Unix-like systems such as Linux always have a single file system tree, regardless of how many drives or storage devices are attached to the computer. 
 
 The directory we are standing in is called the __current working directory__.
@@ -60,44 +66,42 @@ shortcut | result|
 |cd      |Changes the working directory to your home directory|
 
 
-## Exploring The System
-### 1. listing files and subdirectories
+## Exploring The System <a name="ExploringTheSystem"></a>
+__Listing files and subdirectories__
 To list of files and subdirectories contained in the current working directory ```ls``` 
-
 <img src="/code/images/ls-options.PNG" alt="ls" style="width:500px;"/>
+
 
 The long format listing returns many info. for example 
 ```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ```
-
-<img src="code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
 
 
 To show a brief description of a file ```file filename```
 
-There are many kinds of files. In fact, one of the common ideas in Unixlike operating
+There are many kinds of files. In fact, one of the common ideas in Unix-like operating
 systems such as Linux is that “everything is a file”
 
-### 2. less command
+__less command__
 less command is a program to view text files ```less filename```
 
-### 3. Directories Found on Linux System
+__Directories in Linux File System__
 <img src="/code/images/linux-repo-1.PNG" alt="ls" style="width:500px;"/>
 <img src="/code/images/linux-repo-2.PNG" alt="ls" style="width:500px;"/>
 <img src="/code/images/linux-repo-3.PNG" alt="ls" style="width:500px;"/>
 <img src="/code/images/linux-repo-4.PNG" alt="ls" style="width:500px;"/>
 
-### 4. Symbolic Links (soft link or symlink)
+__Symbolic Links (soft link or symlink)__
+It is possible to have a file referenced by multiple names (more details below).
 ```
 lrwxrwxrwx 1 root root   11 2018-08-11 07:34 libc.so.6 -> libc-2.6.so
 ```
-It is possible to have a file referenced by multiple names.
-
-### 5. Hard links 
-Hard links also allow files to have multiple names, but they do it in a different way
+__Hard links__ 
+Hard links also allow files to have multiple names, but they do it in a different way (more details below)
 
 ----------------------------------------------------------------------------
 
-## Manipulating Files and directories
+## Manipulating Files and Directories <a name="ManipulatingFilesDirectories"></a>
 
 ### 1. Wildcards
 <img src="/code/images/wildcards-1.PNG" alt="ls" style="width:500px;"/>
