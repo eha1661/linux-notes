@@ -156,7 +156,7 @@ entry for a file
 -----------------------------------
 ## Working With Commands <a name="workingwithcommands"></a>
 
-__What is a command?__
+__What is a command?__ \
 a command can be:
 - An executable program : it can be compiled binaries or a program written in a scripting language 
 - A command built into the shell itself (shell builtins). For example  ```type```
