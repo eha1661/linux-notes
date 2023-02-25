@@ -67,12 +67,12 @@ shortcut | result|
 ### 1. listing files and subdirectories
 To list of files and subdirectories contained in the current working directory ```ls``` 
 
-<img src="/code/images/ls-options.png" alt="ls" style="width:500px;"/>
+<img src="/code/images/ls-options.PNG" alt="ls" style="width:500px;"/>
 
 The long format listing returns many info. for example 
 ```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ```
 
-<img src="code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
 
 
 To show a brief description of a file ```file filename```
