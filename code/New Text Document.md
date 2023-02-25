@@ -73,7 +73,7 @@ To list of files and subdirectories contained in the current working directory `
 
 
 The long format listing returns many info. for example 
-```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ```
+```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ``` \
 <img src="/code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
 
 
