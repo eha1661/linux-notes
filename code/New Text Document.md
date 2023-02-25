@@ -86,6 +86,7 @@ __less command__
 less command is a program to view text files ```less filename```
 
 __Directories in Linux File System__
+
 <img src="/code/images/linux-repo-1.PNG" alt="ls" style="width:500px;"/>
 <img src="/code/images/linux-repo-2.PNG" alt="ls" style="width:500px;"/>
 <img src="/code/images/linux-repo-3.PNG" alt="ls" style="width:500px;"/>
