@@ -1,6 +1,3 @@
-
-
-
 # Summary 
 
 1. __[Shell](#pookie)__
@@ -72,7 +69,7 @@ To list of files and subdirectories contained in the current working directory `
 The long format listing returns many info. for example 
 ```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ```
 
-<img src="/code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
+<img src="code/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
 
 
 To show a brief description of a file ```file filename```
@@ -84,10 +81,10 @@ systems such as Linux is that “everything is a file”
 less command is a program to view text files ```less filename```
 
 ### 3. Directories Found on Linux System
-<img src="/images/linux-repo-1.PNG" alt="ls" style="width:500px;"/>
-<img src="/images/linux-repo-2.PNG" alt="ls" style="width:500px;"/>
-<img src="/images/linux-repo-3.PNG" alt="ls" style="width:500px;"/>
-<img src="/images/linux-repo-4.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/linux-repo-1.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/linux-repo-2.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/linux-repo-3.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/linux-repo-4.PNG" alt="ls" style="width:500px;"/>
 
 ### 4. Symbolic Links (soft link or symlink)
 ```
@@ -103,11 +100,11 @@ Hard links also allow files to have multiple names, but they do it in a differen
 ## Manipulating Files and directories
 
 ### 1. Wildcards
-<img src="/images/wildcards-1.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/wildcards-1.PNG" alt="ls" style="width:500px;"/>
 
-<img src="/images/wildcards-2.PNG" alt="ls" style="width:350px;"/>
+<img src="/code/images/wildcards-2.PNG" alt="ls" style="width:350px;"/>
 
-<img src="/images/wildcards-3.PNG" alt="ls" style="width:500px;"/>
+<img src="/code/images/wildcards-3.PNG" alt="ls" style="width:500px;"/>
 
 ### 2. commands 
 - To create directories ```mkdir directory...```
@@ -117,25 +114,25 @@ Hard links also allow files to have multiple names, but they do it in a differen
     - copies multiple items (either files or directories) into a directory
     ```cp item... directory```
     - cp options
-    <img src="/images/cp-options.PNG" alt="ls" style="width:500px;"/>
+    <img src="/code/images/cp-options.PNG" alt="ls" style="width:500px;"/>
     - some examples
-    <img src="/images/cp-examples.PNG" alt="ls" style="width:500px;"/>
+    <img src="/code/images/cp-examples.PNG" alt="ls" style="width:500px;"/>
 
 - ```mv``` command
     - The mv command performs both file moving and file renaming, depending
 on how it is used
     - mv options
-    <img src="/images/mv-options.PNG" alt="ls" style="width:500px;"/>
+    <img src="/code/images/mv-options.PNG" alt="ls" style="width:500px;"/>
     - mv exampes
-    <img src="/images/mv-examples.PNG" alt="ls" style="width:500px;"/>
+    <img src="/code/images/mv-examples.PNG" alt="ls" style="width:500px;"/>
 
 - ```rm``` command
     - rm command is used to remove (delete) files and directories
     - __be carefull__ Linux do not have an undelete command
     - rm options
-    <img src="/images/rm-options.PNG" alt="ls" style="width:500px;"/>
+    <img src="/code/images/rm-options.PNG" alt="ls" style="width:500px;"/>
     - rm examples
-    <img src="/images/rm-examples.PNG" alt="ls" style="width:500px;"/>
+    <img src="/code/images/rm-examples.PNG" alt="ls" style="width:500px;"/>
 
 - ```ln```
     - hard links
