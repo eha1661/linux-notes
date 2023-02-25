@@ -287,7 +287,7 @@ The pipelines can be used as follows:
     - exampe : ```ls /usr/bin | tee ls.txt | grep zip```
 
 ## Expansion and Quoting <a name="expansionquoting"></a>
-__Expansion__
+__Expansion__\
 Bash performs several substitutions upon the text before it carries out command.\
 For example, ```echo *```; the bash command expands ```*```into the files at the current directory.\
 There are different expansions available:
@@ -305,7 +305,7 @@ username@machinename:~$ echo $((2 + 2))
 4
 ``` 
 * brace expansion 
-``` shell
+> ``` shell
 username@machinename:~$ echo Front-{A,B,C}-Back
 ``` 
 ``` shell
