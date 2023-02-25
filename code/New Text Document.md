@@ -1,0 +1,295 @@
+
+
+
+## Summary 
+
+1. [Shell](#pookie)
+4. [pipelines](#pipelines)
+
+
+### Shell <a name="pookie"></a>
+__What is a Shell__
+The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell)
+
+__shell prompt__
+``` shell
+username@machinename:~$
+```
+(#) if the terminal session has superuser priveledges
+
+__command history__
+Linux distributions remember the last 1,000 commands by default.
+If we press the up arrow, we will see that the previous command entered
+
+__some simple cammands__
+* date : to displays the current time and date
+* df : to see the current amount of free space on our disk drives, enter df
+* free : to display the amount of free memory
+* exit : to end the terminal session
+
+
+__composition of a command line__
+
+```command -options arguments```
+* short option consists of one letter for example : -l 
+* long options consist of a word preceded by two dashes : --help
+
+
+
+## Navigation
+Unix-like systems such as Linux always have a single file system tree, regardless of how many drives or storage devices are attached to the computer. 
+
+The directory we are standing in is called the __current working directory__.
+
+To display the current working directory
+``` shell
+username@machinename:~$ pwd
+```
+
+To list the files and directories in the current working directory
+``` shell
+username@machinename:~$ pwd
+```
+> Absolute Pathnames
+/usr/bin
+    
+> Relative Pathnames
+ . (dot) and .. (dot dot) are used to
+
+
+shortcut | result|
+:-------:| ------|
+|cd      |Changes the working directory to your home directory|
+
+
+## Exploring The System
+### 1. listing files and subdirectories
+To list of files and subdirectories contained in the current working directory ```ls``` 
+
+<img src="/images/ls-options.PNG" alt="ls" style="width:500px;"/>
+
+The long format listing returns many info. for example 
+```-rw-r--r-- 1 root root   32059 2017-04-03 11:05 oo-cd-cover.odf ```
+
+<img src="/images/ls-l-info.PNG" alt="ls" style="width:500px;"/>
+
+
+To show a brief description of a file ```file filename```
+
+There are many kinds of files. In fact, one of the common ideas in Unixlike operating
+systems such as Linux is that “everything is a file”
+
+### 2. less command
+less command is a program to view text files ```less filename```
+
+### 3. Directories Found on Linux System
+<img src="/images/linux-repo-1.PNG" alt="ls" style="width:500px;"/>
+<img src="/images/linux-repo-2.PNG" alt="ls" style="width:500px;"/>
+<img src="/images/linux-repo-3.PNG" alt="ls" style="width:500px;"/>
+<img src="/images/linux-repo-4.PNG" alt="ls" style="width:500px;"/>
+
+### 4. Symbolic Links (soft link or symlink)
+```
+lrwxrwxrwx 1 root root   11 2018-08-11 07:34 libc.so.6 -> libc-2.6.so
+```
+It is possible to have a file referenced by multiple names.
+
+### 5. Hard links 
+Hard links also allow files to have multiple names, but they do it in a different way
+
+----------------------------------------------------------------------------
+
+## Manipulating Files and directories
+
+### 1. Wildcards
+<img src="/images/wildcards-1.PNG" alt="ls" style="width:500px;"/>
+
+<img src="/images/wildcards-2.PNG" alt="ls" style="width:350px;"/>
+
+<img src="/images/wildcards-3.PNG" alt="ls" style="width:500px;"/>
+
+### 2. commands 
+- To create directories ```mkdir directory...```
+- ```cp``` command
+    - copies the single file or directory item1 to the file or directory item2 
+    ```cp item1 item2```
+    - copies multiple items (either files or directories) into a directory
+    ```cp item... directory```
+    - cp options
+    <img src="/images/cp-options.PNG" alt="ls" style="width:500px;"/>
+    - some examples
+    <img src="/images/cp-examples.PNG" alt="ls" style="width:500px;"/>
+
+- ```mv``` command
+    - The mv command performs both file moving and file renaming, depending
+on how it is used
+    - mv options
+    <img src="/images/mv-options.PNG" alt="ls" style="width:500px;"/>
+    - mv exampes
+    <img src="/images/mv-examples.PNG" alt="ls" style="width:500px;"/>
+
+- ```rm``` command
+    - rm command is used to remove (delete) files and directories
+    - __be carefull__ Linux do not have an undelete command
+    - rm options
+    <img src="/images/rm-options.PNG" alt="ls" style="width:500px;"/>
+    - rm examples
+    <img src="/images/rm-examples.PNG" alt="ls" style="width:500px;"/>
+
+- ```ln```
+    - hard links
+        - to create a hard link ```ln file link```
+        - By default, every file has a single hard link
+that gives the file its name. When we create a hard link, we create an additional directory
+entry for a file
+        - limitation : A hard link cannot reference a file outside its own file system
+        - limitation : A hard link may not reference a directory.
+
+    - symbolic links
+        - to cteate a soft link ```ln -s item link```
+        - They work by creating a special type of file that contains a text pointer to the referenced file or directory (like Windows shortcut)
+
+-----------------------------------
+
+## Working With Commands
+
+### 1. What is a command?
+a command can be:
+- An executable program : it can be compiled binaries or a program written in a scripting language 
+- A command built into the shell itself (shell builtins). For example  ```type```
+- A shell function : miniature shell scripts incorporated into the environment
+- An alias
+
+### 2. commands 
+- ```type``` command
+    - it is a shell builtin that displays the kind of command the shell will execute
+- ```which``` command
+    - it displays the executabl's location
+- ```help```
+    - it shows the help for shell builtins
+- the option __help__ 
+    - it display usage information for many executable programs. For example ```python3 --help``` 
+- ```man```
+    - man is special program used to view documentation ( manual or man page) of a particular program.
+    For exmaple ```man ls```
+- ```whatis```
+    - The whatis program displays the name and a one-line description of a man page matching a specified keyword
+- ```info```
+    - The GNU Project provides an alternative to man pages for their programs, called info. 
+    e.g ```info ls```
+- ```alias```
+    - it create an alis. For example ```alias foo='cd /usr; ls; cd -'```
+    - to remove an alias ```unalias command1```
+    - to see all the aliases defined in the environment ```alias```
+    - aliases vanish when your shell session ends
+
+### 3. tricks
+- It’s possible to put more than one command on a line ```command1; command2; command3...```
+
+-----------------------------------
+
+## RediRection (I/O Redirection)
+
+Programs such as ls actually send their results to a special file called __standard output__ (often expressed as __stdout__) and their status messages to another file called __standard error__ (__stderr__). By default, both standard output and standard error are linked to the screen and not saved into a disk file.
+
+In addition, many programs take input from a facility called __standard input__ (__stdin__),  which is, by default, attached to the keyboard.
+
+I/O redirection allows us to change where output goes and where input comes from.
+
+### 1. Redirecting Standard Output
+
+We use the __>__ redirection operator followed by the name of the file. Why w
+ We append redirected output to a file instead of overwriting the file from the beginning, using the __>>__ redirection operator
+
+Example
+- saving ls output to a file
+    ```shell
+    ls -l /usr/bin > ls-output.txt
+    ```
+    ```shell
+    ls -l /usr/bin >> ls-output.txt
+    ```
+- the redirection operator with no command preceding it will truncate an existing file or create a new, empty file.
+    ```shell
+    > ls-empty.txt
+    ```
+### 2. Redirecting Standard Error
+
+Redirecting standard error lacks the ease of a dedicated redirection operator.
+
+While we have referred to the first three of these file streams as standard input, output, and error, the shell references them internally as file descriptors 0, 1, and 2, respectively.
+
+The shell provides a notation for redirecting files using the  file descriptor number
+
+examples:
+-  Redirecting ls standard error
+    ```shell
+    ls -l /bin/usr 2> ls-error.txt
+    ```
+- Redirecting Standard Output and Standard Error to One File
+    ```shell
+    ls -l /bin/usr > ls-output.txt 2>&1
+    ```
+    ```shell
+    ls -l /bin/usr &> ls-output.txt
+    ``` 
+    ```shell
+    ls -l /bin/usr &>> ls-output.txt
+    ``` 
+- In case we don't need outputs from a command
+    ```shell
+    ls -l /bin/usr 2> /dev/null
+    ``` 
+
+### 3. Redirecting Standard Input
+
+commands:
+- ```cat```
+    - it reads one or more files and copies them to standard output
+    - it is often used to display short text files
+    - example : join some files ```cat movie.mpeg.0* > movie.mpeg```
+    - cat is not given any arguments, it reads from standard input (standard input is keyboard by default)
+     Type ctrl-D to tell cat that it has reached the end of file (EOF)
+    - Using the __<__ redirection operator, we change the source of standard input from the keyboard to the file myfile.txt
+    ```shell
+    cat < myfile.txt
+    ``` 
+
+### 4. Pipelines <a name="pipelines"></a>
+Using the pipeoperator __|__, the standard output of one command can be piped into the standard input of another.
+```shell
+command1 | command2
+``` 
+
+The pipelines can be used as follows:
+- Filters:
+    - Filters take input, change it somehow, and then output it. 
+    - example:
+        ``` shell
+        ls /bin /usr/bin | sort | less
+        ```
+- Report or Omit Repeated Lines
+    - ```uniq``` accepts a sorted list of data from either standard input or a single filename argument and, by default, removes any duplicates from the list
+    - example : ```ls /bin /usr/bin | sort | uniq | less``` 
+- Print Line, Word, and Byte Counts
+    - ```wc```is used to display the number of lines, words, and bytes contained in files
+    - example : ```ls /bin /usr/bin | sort | uniq | wc -l```
+- Print Lines Matching a Pattern ```grep```
+    - grep is a powerful program used to find text patterns within files. ```grep pattern filename```
+    - example : ```ls /bin /usr/bin | sort | uniq | grep zip```
+- Print First/Last Part of Files ```head/tail```
+    - You might want only the first few lines or the last few lines
+    - example : ```head -n 5 ls-output.txt```
+- Read from Stdin and Output to Stdout and Files (tee)
+    - The tee program reads standard input and copies it to both standard output (allowing the data to continue down the pipeline) and to one or more files
+    - exampe : ```ls /usr/bin | tee ls.txt | grep zip```
+----------------------------------------------------------------------
+
+
+
+### markdwon resources 
+- [shd101](https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics)
+- [Mastering Markdown](https://shd101wyy.github.io/markdown-preview-enhanced/#/markdown-basics)
+
+
+
