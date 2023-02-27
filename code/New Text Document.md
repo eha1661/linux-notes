@@ -6,7 +6,7 @@
 5. __[Working With Commands](#workingwithcommands)__
 6. __[Redirection](#redirection)__
 7. __[Expansion and Quoting](#expansionquoting)__
-8. __[Keyboard Tricks](#keyboardTricks)__  (TO CHECk)  
+8. __[Keyboard Tricks](#keyboardtricks)__  (TO CHECk)  
 9. __[Permissions](#permissions)__ (TO CHECK)
 10. __[Processes](#processes)__ (NOW)
 11. __[ProcessEnvironmentes](#environment)__ (TOMORROW)
@@ -347,7 +347,7 @@ username@machinename:~$ echo "$(cal)"
 username@machinename:~$ echo "$USER won \$200.00"
 ``` 
 
-## Keyboard Tricks <a name="keyboardTricks"></a>
+## Keyboard Tricks <a name="keyboardtricks"></a>
 __command line editing__
 * Cursor movement
 <img src="/code/images/cursorr-movement_cmd.png" alt="ls" style="width:500px;"/> 
