@@ -386,12 +386,12 @@ the listing consists of: file type, ownership,  permissions ...
 
 <img src="/code/images/permission-attributes.png" alt="ls" style="width:500px;"/> 
 
-__Changing File Mode__
+__Changing File Mode__ \
 To change the mode (permissions) of a file or directory, use the chmod command. Be aware that only the file’s owner or the superuser can change the mode of a file or directory. chmod supports two distinct ways of specifying mode changes: Octal number representation and symbolic representation
 
 1. Octal number representation \
 The table below shows file mode in binary and octal
-<img src="/code/images/file-mode-table.png" alt="ls" style="width:400px;"/>
+<img src="/code/images/file-mode-table.png" alt="ls" style="width:250px;"/>
 
 example:
 ``` shell
@@ -404,14 +404,15 @@ username@machinename:~$ ls -l foo.txt
 
 2. symblic representation
 chmod Symbolic Notation is defined : 
-<img src="/code/images/file-mode-table.png" alt="ls" style="width:400px;"/>
+<img src="/code/images/file-mode-table.png" alt="ls" style="width:250px;"/>
 
 If no character is specified, “all” will be assumed.
 
-Some examples
-<img src="/code/images/symbolic-mode-examples.png" alt="ls" style="width:400px;"/>
+Some examples 
 
-__Changing Identities__
+<img src="/code/images/symbolic-mode-examples.png" alt="ls" style="width:500px;"/>
+
+__Changing Identities__ \
 There are three ways to take on an alternate identity:
 * Log out and log back in as the alternate user.
 * Use the su command.
