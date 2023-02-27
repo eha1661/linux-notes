@@ -6,14 +6,13 @@
 5. __[Working With Commands](#workingwithcommands)__
 6. __[Redirection](#redirection)__
 7. __[Expansion and Quoting](#expansionquoting)__
-8. __[Keyboard Tricks](#keyboardTricks)__  (TODAY)
-9. __[Permissions](#permissions)__ (TODAY)
-10. __[Processes](#processes)__ (TOMORROW)
+8. __[Keyboard Tricks](#keyboardTricks)__  (TO CHECk)
+9. __[Permissions](#permissions)__ (TO CHECK)
+10. __[Processes](#processes)__ (NOW)
 11. __[ProcessEnvironmentes](#environment)__ (TOMORROW)
-12. __[VI and VIM ](#vim)__
-13. __[Customizing the Prompt](#customizingprompt)__
+12. __[VI and VIM ](#vim)__ (TOMORROW A SEPERATE MD)
 
-## Intro Shell <a name="introshell"></a>
+## Intro Shell <a name="introshell"></a>  
 __What is a Shell__
 The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell) [[1]](#ref1)
 
@@ -348,7 +347,93 @@ username@machinename:~$ echo "$(cal)"
 username@machinename:~$ echo "$USER won \$200.00"
 ``` 
 
+## Keyboard Tricks <a name="keyboardTricks"></a>
+__command line editing__
+* Cursor movement
+<img src="/code/images/cursorr-movement_cmd.png" alt="ls" style="width:500px;"/> 
 
+
+__Using history__
+* searching hisotry
+> we can view the contents of the command history list by ```history | less```
+
+<img src="/code/images/history-cmd.png" alt="ls" style="width:500px;"/> 
+
+* History expansion
+<img src="/code/images/history-expansion.png" alt="ls" style="width:500px;"/> 
+
+## Permissions <a name="permissions"></a>
+__Owners, Group Members, and Everybody Else__
+
+When user accounts are created, users are assigned a number called a user ID (uid)
+which is then mapped to a username. The user is assigned a group ID (gid) and may belong to additional groups.
+
+To show available ids in your system ```id```
+
+Files containing informations about users, groups are:
+* ```/etc/passwd``` : user accounts
+* ```/etc/group``` : groups 
+* ```/etc/shadow``` : user's password
+
+__Reading, Writing, and Executing__
+Access rights to files and directories are defined in terms of read access, write access, and execution access.
+```-rw-rw-r-- 1  me   0  2018-03-06  14:52  foo.txt```
+the listing consists of: file type, ownership,  permissions ...
+<img src="/code/images/file-types.png" alt="ls" style="width:500px;"/> 
+<img src="/code/images/owner-group-world.png" alt="ls" style="width:200px;"/> 
+<img src="/code/images/permission-attributes.png" alt="ls" style="width:500px;"/> 
+
+__Changing File Mode__
+To change the mode (permissions) of a file or directory, use the chmod command. Be aware that only the file’s owner or the superuser can change the mode of a file or directory. chmod supports two distinct ways of specifying mode changes: Octal number representation and symbolic representation
+
+1. Octal number representation \
+The table below shows file mode in binary and octal
+<img src="/code/images/file-mode-table.png" alt="ls" style="width:400px;"/>
+
+example:
+``` shell
+username@machinename:~$ chmod 600 foo.txt
+username@machinename:~$ ls -l foo.txt
+``` 
+``` shell
+-rw------- 1  me  me  0  2018-03-06 14:52 foo.txt
+``` 
+
+2. symblic representation
+chmod Symbolic Notation is defined : 
+<img src="/code/images/file-mode-table.png" alt="ls" style="width:400px;"/>
+
+If no character is specified, “all” will be assumed.
+
+Some examples
+<img src="/code/images/symbolic-mode-examples.png" alt="ls" style="width:400px;"/>
+
+__Changing Identities__
+There are three ways to take on an alternate identity:
+* Log out and log back in as the alternate user.
+* Use the su command.
+* Use the sudo command.
+
+* ```su``` command
+The su command is used to start a shell as another user.
+
+``` shell
+su [-[l]] [user]
+```
+
+* ```sudo``` : Execute a Command As Another User
+The administrator can configure sudo to allow an ordinary user to execute commands as a different user (usually the supe-ruser) in a controlled way.Also, sudo does not require access to the superuser’s password.
+
+
+* ```chown``` : Change File Owner and Group
+The chown command is used to change the owner and group owner of a file
+or directory. Superuser privileges are required to use this command. 
+```
+chown [owner][:[group]] file...
+```
+Some examples
+<img src="/code/images/chown-1.png" alt="ls" style="width:400px;"/>
+<img src="/code/images/chown-1.png" alt="ls" style="width:400px;"/>
 
 ----------------------------------------------------------------------
 # Resources 
