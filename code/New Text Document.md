@@ -6,8 +6,8 @@
 5. __[Working With Commands](#workingwithcommands)__
 6. __[Redirection](#redirection)__
 7. __[Expansion and Quoting](#expansionquoting)__
-8. __[Keyboard Tricks](#keyboardtricks)__  (TO CHECk)  
-9. __[Permissions](#permissions)__ (TO CHECK)
+8. __[Keyboard Tricks](#keyboardtricks)__  
+9. __[Permissions](#permissions)__
 10. __[Processes](#processes)__ (NOW)
 11. __[ProcessEnvironmentes](#environment)__ (TOMORROW)
 12. __[VI and VIM ](#vim)__ (TOMORROW A SEPERATE MD)
