@@ -379,9 +379,12 @@ __Reading, Writing, and Executing__ \
 Access rights to files and directories are defined in terms of read access, write access, and execution access.
 ```-rw-rw-r-- 1  me   0  2018-03-06  14:52  foo.txt``` \
 the listing consists of: file type, ownership,  permissions ...
-<img src="/code/images/file-types.png" alt="ls" style="width:500px;"/>  \
-<img src="/code/images/owner-group-world.png" alt="ls" style="width:200px;"/>  \
-<img src="/code/images/permission-attributes.png" alt="ls" style="width:500px;"/> \
+
+<img src="/code/images/file-types.png" alt="ls" style="width:500px;"/>  
+
+<img src="/code/images/owner-group-world.png" alt="ls" style="width:200px;"/>  
+
+<img src="/code/images/permission-attributes.png" alt="ls" style="width:500px;"/> 
 
 __Changing File Mode__
 To change the mode (permissions) of a file or directory, use the chmod command. Be aware that only the file’s owner or the superuser can change the mode of a file or directory. chmod supports two distinct ways of specifying mode changes: Octal number representation and symbolic representation
