@@ -413,23 +413,23 @@ Some examples
 <img src="/code/images/symbolic-mode-examples.png" alt="ls" style="width:500px;"/>
 
 __Changing Identities__ \
-There are three ways to take on an alternate identity:
+> There are three ways to take on an alternate identity:
 * Log out and log back in as the alternate user.
 * Use the su command.
 * Use the sudo command.
 
-* ```su``` command
+1.  ```su``` command
 The su command is used to start a shell as another user.
 
 ``` shell
 su [-[l]] [user]
 ```
 
-* ```sudo``` : Execute a Command As Another User
+2. ```sudo``` : Execute a Command As Another User
 The administrator can configure sudo to allow an ordinary user to execute commands as a different user (usually the supe-ruser) in a controlled way.Also, sudo does not require access to the superuser’s password.
 
 
-* ```chown``` : Change File Owner and Group
+3. ```chown``` : Change File Owner and Group
 The chown command is used to change the owner and group owner of a file
 or directory. Superuser privileges are required to use this command. 
 ```
