@@ -436,8 +436,10 @@ or directory. Superuser privileges are required to use this command.
 chown [owner][:[group]] file...
 ```
 Some examples
-<img src="/code/images/chown-1.png" alt="ls" style="width:400px;"/>
-<img src="/code/images/chown-1.png" alt="ls" style="width:400px;"/>
+
+<img src="/code/images/chown-1.png" alt="ls" style="width:500px;"/>
+
+<img src="/code/images/chown-1.png" alt="ls" style="width:500px;"/>
 
 ----------------------------------------------------------------------
 # Resources 
