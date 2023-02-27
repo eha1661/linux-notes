@@ -6,7 +6,7 @@
 5. __[Working With Commands](#workingwithcommands)__
 6. __[Redirection](#redirection)__
 7. __[Expansion and Quoting](#expansionquoting)__
-8. __[Keyboard Tricks](#keyboardTricks)__  (TO CHECk)
+8. __[Keyboard Tricks](#keyboardTricks)__  (TO CHECk)  
 9. __[Permissions](#permissions)__ (TO CHECK)
 10. __[Processes](#processes)__ (NOW)
 11. __[ProcessEnvironmentes](#environment)__ (TOMORROW)
@@ -285,7 +285,7 @@ The pipelines can be used as follows:
     - The tee program reads standard input and copies it to both standard output (allowing the data to continue down the pipeline) and to one or more files
     - exampe : ```ls /usr/bin | tee ls.txt | grep zip```
 
-## Expansion and Quoting <a name="expansionquoting"></a>
+## Expansion and Quoting <a name="expansionquoting"></a>  
 __Expansion__\
 Bash performs several substitutions upon the text before it carries out command.\
 For example, ```echo *```; the bash command expands ```*```into the files at the current directory.\
