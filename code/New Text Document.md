@@ -13,7 +13,6 @@
 12. __[VI and VIM ](#vim)__ (TOMORROW A SEPERATE MD)
 
 
-## <span style="color:red">some **This is Red Bold.** text</span>
 ## Intro Shell <a name="introshell"></a>  
 __What is a Shell__
 The shell is a program that takes keyboard commands and passes them to the operating system to carry out. All linux distributions supply a shell program called __bash__ (bourne-against-shell) [[1]](#ref1)
