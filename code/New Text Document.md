@@ -106,8 +106,8 @@ Hard links also allow files to have multiple names, but they do it in a differen
 
 ## Manipulating Files and Directories <a name="manipulatingfilesdirectories"></a>
 
-
 __Wildcards__ 
+
 <img src="/code/images/wildcards-1.PNG" alt="ls" style="width:500px;"/>
 
 <img src="/code/images/wildcards-2.PNG" alt="ls" style="width:350px;"/>
